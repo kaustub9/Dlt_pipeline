@@ -1,0 +1,4 @@
+# Dlt_pipeline
+
+workspace.waters_schema.ingest_flights
+workspace.waters_schema.materialized_view
