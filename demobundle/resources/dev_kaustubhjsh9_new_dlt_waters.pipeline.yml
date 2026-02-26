@@ -1,0 +1,21 @@
+resources:
+  pipelines:
+    dev_kaustubhjsh9_new_dlt_waters:
+      name: '[dev kaustubhjsh9] New_DLT_waters'
+      libraries:
+        - glob:
+            include: ../src/dev_kaustubhjsh9_new_dlt_waters/transformations/**
+      catalog: workspace
+      channel: CURRENT
+      deployment:
+        kind: BUNDLE
+        metadata_file_path: /Workspace/Users/kaustubhjsh9@gmail.com/.bundle/demobundle/dev/state/metadata.json
+      environment:
+        dependencies:
+          - pyspark-data-sources
+      photon: true
+      root_path: ../src/dev_kaustubhjsh9_new_dlt_waters
+      schema: waters_schema
+      serverless: true
+      tags:
+        dev: kaustubhjsh9

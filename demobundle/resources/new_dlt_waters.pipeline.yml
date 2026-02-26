@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    new_dlt_waters:
+      name: New_DLT_waters
+      libraries:
+        - glob:
+            include: ../src/new_dlt_waters/transformations/**
+      catalog: workspace
+      channel: CURRENT
+      continuous: false
+      environment:
+        dependencies:
+          - pyspark-data-sources
+      photon: true
+      root_path: ../src/new_dlt_waters
+      schema: waters_schema
+      serverless: true

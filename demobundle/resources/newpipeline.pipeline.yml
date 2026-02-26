@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    newpipeline:
+      name: newPipeline
+      libraries:
+        - glob:
+            include: ../src/newpipeline/transformations/**
+      catalog: workspace
+      channel: CURRENT
+      continuous: false
+      photon: true
+      root_path: ../src/newpipeline
+      schema: waters_schema
+      serverless: true
