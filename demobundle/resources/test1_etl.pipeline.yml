@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    test1_etl:
+      name: Test1_etl
+      libraries:
+        - glob:
+            include: ../src/test1_etl/transformations/**
+      catalog: workspace
+      channel: CURRENT
+      continuous: false
+      photon: true
+      root_path: ../src/test1_etl
+      schema: default
+      serverless: true
